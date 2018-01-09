@@ -1,0 +1,20 @@
+/* Icons
+---------------------------------------------------- */
+
+// Door icons apart te specificeren in de html de volgende voordelen: 
+// - Voorbereiding op SVG icons
+// - Meer controle over de icons door extra wrap
+.icon {
+    // font-size: font-size(1);
+    font-size: 1em;
+    &:before {
+        @include icon(no-icon);
+    }
+}
+
+.social-media.has-label,
+.has-icon {
+    .icon {
+        margin-right: 0.25em;
+    }
+}

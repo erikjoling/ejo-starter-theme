@@ -1,0 +1,31 @@
+/* Social Media
+---------------------------------------------------- */
+.social-share {
+    margin-top: v-space(2);
+    text-align: center;
+
+    a {
+        display: inline-block;
+        margin-top: v-space(0.5);
+        &:before {
+            @include icon();
+            margin-right: h-space(0.125);
+        }
+
+        + a {
+            margin-left: h-space(0.5);
+        }
+    }
+
+    a[href*="facebook.com"] {
+        &:before {
+            content: icon(fa-facebook);
+        }
+    }
+
+    a[href*="twitter.com"] {
+        &:before {
+            content: icon(fa-twitter);
+        }
+    }
+}

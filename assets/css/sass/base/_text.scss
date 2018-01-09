@@ -1,0 +1,30 @@
+/* Text
+---------------------------------------------------- */
+body {
+    @include font(Helvetica);
+    color: color(black);
+}
+
+b, strong { 
+    font-weight: get-font-weight(bold, Helvetica);
+}
+
+i, em, mark, cite, sup { 
+    font-style: get-font-style(italic, Helvetica); 
+}
+
+sup, sub {
+    line-height: 0;
+    font-size: 0.8em;
+}
+
+sup {
+    vertical-align: super;
+}
+
+sub {
+    vertical-align: sub;
+    position: relative;
+    top: -0.125em;
+    font-size: 0.8em;
+}

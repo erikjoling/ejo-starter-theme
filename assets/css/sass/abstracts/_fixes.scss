@@ -1,0 +1,20 @@
+// Clearfix
+@mixin clearfix() {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// Fixes margin overflow of children
+@mixin margin-overflow-fix {
+    // overflow: auto; // Causes scrollbars in chrome?
+    // overflow: hidden; // Causes scrollbars in chrome?
+
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

@@ -1,0 +1,58 @@
+html, body {
+    box-sizing: content-box;
+}
+
+body.wp-autoresize {
+    overflow: visible !important;
+    /* The padding ensures margins of the children are contained in the body. */
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    > :first-child {
+        margin-top: v-space(0.5);
+    }
+}
+
+body.mce-content-body {
+    margin-left: h-space(0.5);
+    margin-right: h-space(0.5);
+    
+    // Only add these styles on post-types I specify
+    &.post-type-post,
+    &.post-type-page {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: $content-width;
+    }
+
+    @include breakpoint-down(sm) {
+        padding-left: h-space(1) !important;
+        padding-right: h-space(1) !important;
+    }
+}
+
+// Re-set line-heights
+.mce-content-body p, 
+.mce-content-body div {
+    line-height: inherit;
+}
+
+.mce-content-body h1 {
+    line-height: line-height(2);
+}
+.mce-content-body h2 {
+    line-height: line-height(1.25);
+}
+
+.mce-content-body h3, 
+.mce-content-body h4, 
+.mce-content-body h5, 
+.mce-content-body h6 {
+    line-height: inherit;
+}
+
+.gallery br {
+    display: none;
+}

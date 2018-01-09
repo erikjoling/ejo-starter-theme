@@ -1,0 +1,60 @@
+/* Buttons
+---------------------------------------------------- */
+
+//
+// Links vs Buttons vs Submit
+//
+// Anchors should be used for linking to pages or internal sections
+// Buttons should be used for interactions (more useful in applications)
+// A submit button (input type="submit") shoud be used for forms
+//
+// Note: because of conventions I'm allowing myself to style a link as a button
+//
+
+// Reset button-style
+button,
+[type="submit"] {
+    vertical-align: middle;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: auto;
+    }
+}
+
+// Reset link
+a.button {
+    @include reset-link;
+}
+
+// Style Buttons
+button,
+[type="submit"],
+a.button {
+    display: inline-block;
+    padding: (v-space(0.25) - rem(border-width(button) * 2)) 
+             (h-space(0.5) - rem(border-width(button) * 2));
+    text-align: center;
+    border-radius: border-radius(base);
+    background-color: color(blue);
+    color: color(white);
+    border: border(button);
+    transition: $transition;
+
+    @include on-event {
+        background-color: color(blue, dark);
+    }
+
+    &:disabled {
+        background-color: color(gray, light);
+    }
+}
+
+// Easy reset utitlity
+@mixin reset-button() {
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+}

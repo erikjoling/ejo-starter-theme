@@ -1,0 +1,62 @@
+/* Initial
+---------------------------------------------------- */
+
+html {
+    font-size: ($base-font-size / 16) * 100%;
+}
+
+//
+// 1. Allow flexbox-containers to shrink below its min-content
+//    Thus allowing flexboxcontainers to shrink smaller than child-image
+//    - https://teamtreehouse.com/community/firefox-flexbox-not-working
+//    - http://stackoverflow.com/questions/28710379/firefox-flexbox-image-width
+//
+// 2. Inputs and textareas don’t inherit certain properties by default 
+//
+// 3. Defaults
+//
+* {
+    min-width: 0;  // 1
+    min-height: 0; // 1
+
+    // font-size: inherit;   // 2
+    // font-family: inherit; // 2
+    // line-height: inherit; // 2
+    // color: inherit;       // 2
+
+    margin: 0; // 3
+    padding: 0; // 3
+    border: 0; // 3
+}
+
+//
+// 1. Box sizing
+//
+*,
+*::before,
+*::after {
+    box-sizing: border-box; // 1
+}
+
+// HTML5 for IE11 Support
+article, aside, summary, details, figcaption, figure, 
+footer, header, main, nav, section { 
+    display: block;
+}
+
+// To overrule the HTML5 display blocks
+[hidden] {
+    display: none;
+}
+
+// 2. Inputs and textareas don’t inherit certain properties by default 
+input,
+select,
+option,
+textarea,
+button {
+    font-size: inherit;   // 2
+    font-family: inherit; // 2
+    line-height: inherit; // 2
+    color: inherit;       // 2
+}

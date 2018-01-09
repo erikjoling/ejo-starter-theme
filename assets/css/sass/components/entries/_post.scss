@@ -1,0 +1,41 @@
+/* Entry - Plural
+---------------------------------------------------- */
+
+.entry.plural {
+    padding-top: v-space(1);
+    padding-bottom: v-space(1);
+
+    &.has-thumbnail {
+        padding-top: 0;
+    }
+
+    background-color: color(white);
+    
+    display: flex;
+    flex-direction: column;
+
+    > * {
+        // margin-top: 0;
+        flex-grow: 0;
+        text-align: center;
+    }
+
+    .content {
+        flex-grow: 1;
+    }
+
+    header, 
+    .content, 
+    footer {
+       padding-left: h-space(1);
+       padding-right: h-space(1);
+    }
+
+    .featured-image {
+        display: block;
+
+        img {
+            display: block;
+        }
+    }
+}

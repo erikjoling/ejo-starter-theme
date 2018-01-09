@@ -1,0 +1,26 @@
+/* Branding
+-------------------------------------------------------------------*/
+
+// Branding
+.branding {
+
+    h1 {
+        display: inline;
+        
+        font-size: font-size(1.5, Georgia);
+        line-height: line-height(1);
+        font-weight: font-weight(bold, Georgia);
+        
+        /* Correct visual vertical centering */
+        // vertical-align: 6px; 
+    }
+
+	.custom-logo-link {}
+
+	.custom-logo {
+		display: block;
+		margin-bottom: 0;
+		width: auto;
+		height: auto;
+	}
+}

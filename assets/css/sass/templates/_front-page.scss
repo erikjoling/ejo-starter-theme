@@ -1,0 +1,44 @@
+/* Homepage
+---------------------------------------------------- */
+
+.front-page {
+    
+    .content-update-wrapper {
+        @include container;        
+
+        @include breakpoint(lg) {
+            > .group {
+                @include flex-grid(1);
+                flex-wrap: nowrap;
+
+                > .column:nth-child(1) {
+                    flex-grow: 1;
+                }
+
+                > .column:nth-child(2) {
+                    @include flex-item(410px);
+                    min-width: 380px;
+                }
+            }
+        }
+    }
+
+    
+
+    .entry.singular {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        > .content {
+            flex: 1 1 auto;
+            max-width: none;
+        }
+
+        > header {
+            @include breakpoint(lg) {
+                text-align: left;
+            }
+        }
+    }
+}

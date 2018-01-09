@@ -1,0 +1,61 @@
+/* Alignments
+---------------------------------------------------- */
+.alignnone,
+.alignleft,
+.alignright,
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	// text-align: center;
+	margin-bottom: v-space(1);
+
+	img {
+		width: 100%;
+	}
+}
+
+@include breakpoint(md) {
+	.alignleft,
+	.alignright {
+		display: inline;
+		max-width: 50%;
+	}
+
+	.alignleft {
+		float: left;
+		margin-right: h-space(1);
+
+		* + & {
+			margin-top: v-space(1.25);
+		}
+	}
+
+	.alignright {
+		float: right;
+		margin-left: h-space(1);
+
+		* + & {
+			margin-top: v-space(1.25);
+		}
+	}
+
+	.aligncenter,
+	.alignnone {
+		clear: both;
+		display: block;
+	}
+}
+
+@include breakpoint(lg) {
+
+	.alignleft {
+		margin-left: -1 * $content-width-breakout;
+		max-width: calc(50% + #{$content-width-breakout / 2});
+	}
+
+	.alignright {
+		margin-right: -1 * $content-width-breakout;
+		max-width: calc(50% + #{$content-width-breakout / 2});
+	}
+}

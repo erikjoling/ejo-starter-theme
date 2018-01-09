@@ -1,0 +1,13 @@
+/* Miscelaneous
+---------------------------------------------------- */
+hr {
+    width: 100%;
+    // border-bottom: 4px dotted $border-color;
+}
+
+pre {
+    // word-wrap: break-word; 
+    white-space: pre-wrap; 
+    margin-top: v-space(1);
+    margin-bottom: v-space(1);
+}

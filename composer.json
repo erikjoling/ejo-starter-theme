@@ -1,0 +1,13 @@
+{
+    "require": {
+        "htmlburger/carbon-fields": "^2.1",
+        "ejoweb/ejo-core": "dev-master"
+    },
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/erikjoling/ejo-core"
+        }
+    ]
+}

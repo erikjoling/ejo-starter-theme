@@ -1,0 +1,47 @@
+/* Header
+---------------------------------------------------- */
+
+[role=banner] {
+    @include site-padding;
+    background-color: color(blue);
+    color: color(white);
+
+    &, * {
+        margin-top: 0;
+    }
+    
+    > .wrap {
+        @include container;
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        padding-top: v-space(1);
+        padding-bottom: v-space(1);
+
+        transition: $transition;
+    }
+
+    .branding {
+        flex: 0 0 auto;
+    }
+
+    nav {
+        flex: 0 1 auto;
+    }
+    
+    //
+    // Breakpoints
+    // 
+
+    @include breakpoint(lg) {
+
+        > .wrap {
+            justify-content: space-between;
+        }
+    }
+}
+
+

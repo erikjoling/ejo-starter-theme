@@ -1,0 +1,15 @@
+/* Links
+-------------------------------------------------------------------*/
+a {
+	text-decoration: none;
+    color: inherit;
+
+    @include on-event {
+		text-decoration: underline;
+	}	
+}
+
+@mixin reset-link 
+{
+    text-decoration: none;
+}

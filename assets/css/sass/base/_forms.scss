@@ -1,0 +1,57 @@
+/* Forms
+-------------------------------------------------------------------*/
+$form-text-inputs:
+	'input[type=text]',
+	'input[type=password]',
+	'input[type=search]',
+	'input[type=tel]',
+	'input[type=email]',
+	'input[type=url]';
+
+#{$form-text-inputs},
+select,
+textarea {
+	padding: v-space(0.125) h-space(0.2);
+	margin-top: v-space(0.125);
+	margin-bottom: v-space(0.125);
+	background-color: color(white);
+	color: inherit;
+	transition: $transition;
+	border: border(base);
+
+	@include on-event {
+		border-color: color(black);
+	}
+}
+
+/* Try to equalize selects elements to default inputs */
+select {
+	padding: v-space(0.175) h-space(0.1);
+}
+
+option {
+	padding: 0 h-space(0.2);
+}
+
+textarea {
+	resize: vertical;
+	min-height: v-space(4.5);
+}
+
+// Checkbox and radiobutton labels
+input[type=checkbox],
+input[type=radio] {
+
+	+ label {
+		padding-left: h-space(0.25);
+	}
+
+	&:checked + label {
+		font-weight: get-font-weight(bold);
+	}
+}
+
+// Fix Gravity Forms bug where a whitespace is added after checkboxes
+input[type=checkbox] + label {
+	padding-left: h-space(0.125);
+}

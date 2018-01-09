@@ -1,0 +1,63 @@
+// 
+// Flexbox Wrapper
+// 
+@mixin flex-wrapper() {
+    @include margin-overflow-fix();
+}
+
+//
+// Add flexbox to an element
+//
+@mixin flex-grid($gutter: 0) {
+    $gutter-half: $gutter / 2;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    @if ($gutter > 0) {
+        margin-top: v-space(-1 * $gutter);
+        margin-left: h-space(-1 * $gutter-half);
+        margin-right: h-space(-1 * $gutter-half);
+
+        > * {
+            margin-top: v-space(1 * $gutter);
+            padding-left: h-space(1 * $gutter-half);
+            padding-right: h-space(1 * $gutter-half);
+        }
+    }
+}
+
+//
+// This mixin incorporates fixes for some flexbox bugs
+// 
+// 1. Box-sizing gets ignored on IE 10-11 flexbox so need to add width
+//
+@mixin flex-item($size: 'initial', $direction: 'row') {
+    
+    // Decide whether to use width or height
+    $dimension: width;
+    @if ($direction == 'column') {
+        $dimension: height;
+    }
+    
+    // Decide which flex values to use
+    @if ($size == '' OR $size == 'initial') {
+        flex: 0 1 auto;
+    }
+    @elseif ($size == auto) {
+        flex: 1 1 auto;
+    }
+    @elseif ($size == 1) {
+        flex: 1 1 0%;
+    }
+    @elseif (unit($size) != '') {
+        flex: 0 1 $size;
+        max-#{$dimension}: $size;
+        // flex: 1 0: $size;
+        // max-#{$dimension}: none;
+    }
+    @elseif ($size != null) {
+        flex: 1 1 ($size) * 100%;
+        max-#{$dimension}: ($size) * 100%;
+    }
+}

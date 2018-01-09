@@ -1,0 +1,28 @@
+{
+    "name"       : "ejoweb/ejo-core",
+    "description": "Ejo Core WordPress theme framework",
+    "keywords"   : ["wordpress"],
+    "homepage"   : "https://www.ejoweb.nl/",
+    "license"    : "GPL-2.0+",
+    "authors"    : [
+        {
+            "name"    : "Ejoweb",
+            "email"   : "erik@ejoweb.nl",
+            "homepage": "https://ejoweb.nl/",
+            "role"    : "Developer"
+        },
+        {
+            "name"    : "Erik Joling",
+            "email"   : "erik@joling.me",
+            "homepage": "https://erik.joling.me/",
+            "role"    : "Developer"
+        }
+    ],
+    "support"    : {
+        "issues": "https://github.com/erikjoling/ejo-core/issues",
+        "email" : "erik@ejoweb.nl"
+    },
+    "autoload"   : {
+        "classmap": ["ejo-core.php"]
+    }
+}

@@ -1,0 +1,15 @@
+/* Main
+---------------------------------------------------- */
+
+main {
+    width: 100%;
+    margin-top: 0;
+
+    // Make sure the children of main fill the height
+    display: flex;
+    flex-direction: column;
+
+    > * {
+        flex: 1 0 auto;
+    }
+}

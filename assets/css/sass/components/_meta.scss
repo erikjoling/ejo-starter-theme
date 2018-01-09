@@ -1,0 +1,43 @@
+/* Meta
+---------------------------------------------------- */
+
+.meta {
+    margin-top: v-space(0.25);
+    font-size: font-size(0.75);
+    line-height: line-height(0.75);
+    text-transform: uppercase;
+
+    & > * + * {
+        margin-left: h-space(0.5);
+    }
+}
+
+.meta {
+    .author,
+    .categories,
+    .tags {
+        &:before {
+            @include icon(no-icon);
+            margin-right: 4px;
+            // color: color(gray, light);
+        }
+    }
+
+    .author {
+        &:before {
+            content: icon(fa-user);
+        }
+    }
+
+    .categories {
+        &:before {
+            content: icon(fa-folder-open);
+        }
+    }
+
+    .tags {
+        &:before {
+            content: icon(fa-tag);
+        }
+    }
+}

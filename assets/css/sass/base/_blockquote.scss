@@ -1,0 +1,26 @@
+/* Blockquotes
+---------------------------------------------------- */
+blockquote {
+    padding: v-space(0.5) h-space(0.75);
+    background-color: color(white, base, 0.05);
+    border-top: border-width(base) border-style(base) color(white, base, 0.1);
+    border-bottom: border-width(base) border-style(base) color(white, base, 0.1);
+    border-left: 4px border-style(base) border-color(base);
+    
+    @include font(Georgia);
+
+    i,
+    em, 
+    cite {
+        @include font(Helvetica);
+    }
+
+    cite {
+        display: block;
+        opacity: 0.75;
+
+        &:before {
+            content: "\2014 \2009";
+        }
+    }
+}

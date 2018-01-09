@@ -1,0 +1,39 @@
+/* Footer
+---------------------------------------------------- */
+
+[role=contentinfo] {
+    @include site-padding;
+    background-color: color(gray);
+
+    &, * {
+        margin-top: 0;
+    }
+    
+    > .wrap {
+        @include container;
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        padding-top: v-space(1);
+        padding-bottom: v-space(1);
+
+        transition: $transition;
+    }
+
+    span {
+        margin-left: h-space(0.25);
+        margin-right: h-space(0.25);
+    }
+}
+
+.footer-line {
+    margin-top: 0;
+    padding-top: v-space(0.5);
+    padding-bottom: v-space(0.5);
+    color: color(white);
+    text-align: center;
+}
+

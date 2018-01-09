@@ -1,0 +1,1 @@
+<?php /* Check the `templates` subdirectory */ ?>

@@ -1,0 +1,32 @@
+/* Tables
+---------------------------------------------------- */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+
+    margin-bottom: v-space(1);
+    border-top: border(base);
+    border-left: border(base);
+}
+
+th,
+td {
+    text-align: left;
+    vertical-align: middle;
+    border-right: border(base);
+    border-bottom: border(base);
+    padding: v-space(0.5) h-space(0.5);
+}
+
+// Reset table
+@mixin reset-table {
+    border: 0;
+
+    th,
+    td {
+        padding: 0;
+        border: 0;
+        vertical-align: top;
+    }
+}

@@ -1,0 +1,26 @@
+/* Media
+---------------------------------------------------- */
+img,
+figure,
+audio,
+video,
+object,
+embed,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+figure img {
+    display: block;
+}
+
+figcaption {
+    padding: v-space(0) h-space(0.25);
+    font-style: font-style(italic);
+    margin-top: v-space(0.2);
+    // font-size: font-size(0.9);
+    line-height: v-space(0.8);
+    text-align: center;
+    opacity: 0.75;
+}

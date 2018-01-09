@@ -1,0 +1,23 @@
+//
+// Containers
+//
+
+@mixin container($width: $container-width) {
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+@mixin wide-content($breakout-width: $content-width-breakout) {
+     @include breakpoint(lg) {
+        margin-left: $breakout-width * -1;
+        margin-right: $breakout-width * -1;
+
+        > * {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: calc(100vw - #{site-padding(lg) * 2});
+        }
+    }
+}

@@ -1,0 +1,23 @@
+/* Flow
+---------------------------------------------------- */
+
+// 
+// The Lobotomized Owl
+//
+// Note: `Inline` elements don't output vertical margins
+// Source: https://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+// 
+* + * {
+    margin-top: v-space(1);
+}
+
+//
+// General exceptions
+//
+
+[hidden], .hidden, :empty, // hidden/empty
+// br,
+#wpadminbar // WordPress admin-bar
+{
+    margin-top: 0;
+}

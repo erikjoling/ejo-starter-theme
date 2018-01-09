@@ -1,0 +1,138 @@
+////
+// Paths
+////
+$img-path: '../images/';
+$font-path: '../fonts/';
+
+////
+// COLORS
+////
+
+// Color Library
+// It is recommended to use an overview for quick reference
+$blue:  #0050B4;
+$gray:  #DDDDDD;
+$black: #222222;
+$white: #FFFFFF;
+
+$color-palette: (
+    blue: (
+        base: $blue,
+        light: lighten($blue, 10%),
+        dark: darken($blue, 10%),
+    ),
+	white: (
+        base: $white,
+        light: lighten($white, 10%),
+        dark: darken($white, 10%),
+    ),
+    black: (
+        base: $black,
+        light: lighten($white, 10%),
+        dark: darken($white, 10%),
+    ),
+    gray: (
+        base: $gray,
+        light: lighten($gray, 10%),
+        dark: darken($gray, 10%),
+    ),
+);
+
+////
+// TYPOGRAPHY
+////
+
+// Font dimensions
+$base-font-size: 16;
+$base-line-height: $base-font-size * 1.625;
+$base-line-height-ratio: $base-line-height / $base-font-size;
+
+// Font appearance
+$base-font: Helvetica;
+$base-unit: rem;
+
+$fonts: (
+	Helvetica: (
+		stack: ( Helvetica, sans-serif ),
+        weights: (
+            normal: 400,
+            bold: 700
+        ),
+		styles: ( normal, italic ),
+	),
+
+	Georgia: (
+		stack: ( Georgia, serif ),
+        weights: (
+            normal: 400,
+            bold: 700
+        ),
+		styles: ( normal ),
+        size-correction: +4,
+	),
+);
+
+////
+// SIZES
+////
+
+//
+// Breakpoints mobile-first
+//
+$breakpoints: (
+	xs:  0,
+	sm:  480px,
+	md:  720px,
+	lg:  960px,
+	xl:  1200px,
+);
+
+//
+// Site Padding
+//
+$site-paddings: (
+    xs: 0.25,
+    sm: 1,
+    lg: 1.5,
+);
+
+//
+// Spaces
+//
+$vertical-space-ratio:   $base-line-height-ratio * 0.75; // Vertical space equal to line-height
+$horizontal-space-ratio: $vertical-space-ratio * 1.25; // Make horizontal gutter bigger than vertical
+
+//
+// Containers
+//
+$container-width: 1200px;
+$content-width: 600px;
+$content-width-breakout: 100px;
+$content-width-large: $content-width + $content-width-breakout * 2;
+
+////
+// STYLING
+////
+
+//
+// Borders
+// See: abstracts/borders
+//
+$borders: (
+    base: (
+        width: 1px,
+        style: solid,
+        color: color(gray),
+        radius: 4px
+    ),
+    button: (
+        width: 0px,
+        color: color(blue, base, 0),
+    )
+);
+
+//
+// Transitions
+//
+$transition: all 300ms ease 0s;
+$transition-fast: all 150ms ease 0s;
